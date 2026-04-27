@@ -1,59 +1,104 @@
 body {
   margin: 0;
   font-family: Arial;
+  background: #f5f5f5;
 }
 
-/* ✅ Navbar */
+/* NAVBAR */
 nav {
   display: flex;
   justify-content: space-between;
-  background: black;
+  align-items: center;
+  background: #ff4d6d;
   color: white;
-  padding: 10px;
+  padding: 15px 20px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
-  gap: 15px;
+  gap: 20px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  font-weight: bold;
 }
 
-/* ✅ Home */
+/* HOME */
 .home {
   text-align: center;
-  padding: 50px;
+  padding: 80px 20px;
+  background: linear-gradient(to right, #ff4d6d, #ff758f);
+  color: white;
 }
 
-/* ✅ Product */
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: white;
+  color: #ff4d6d;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* PRODUCTS */
 .products {
   display: flex;
   gap: 20px;
-  padding: 20px;
+  padding: 30px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* ✅ Card */
+/* CARD */
 .card {
-  border: 1px solid #ccc;
-  padding: 10px;
-  width: 150px;
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 180px;
   text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
 }
 
-/* ✅ RESPONSIVE (INI PENTING!) */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.price {
+  color: #ff4d6d;
+  font-weight: bold;
+}
+
+button {
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #e63e5c;
+}
+
+/* RESPONSIVE */
 @media (max-width: 600px) {
-  .products {
+  nav {
     flex-direction: column;
-    align-items: center;
   }
 
-  nav {
+  .products {
     flex-direction: column;
     align-items: center;
   }
